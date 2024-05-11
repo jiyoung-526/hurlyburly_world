@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Hurlys</title>
+    <link rel="stylesheet" href="50styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="imageLinks" class="container"></div>
+    <a href="HurlyBurlyWorld.html" class="logo-link">
+        <img src="hblogo.svg" alt="HurlyBurly Logo">
+    </a>
+
+    <script>
+        const descriptions = [
+            "아이스크림 많이 먹은 죄","햄버거 과식한 죄", "도넛 너무 많이 먹은 죄",
+            "바나나 끊임없이 먹은 죄", "피망 편식한 죄", "컵케이크 사랑한 죄",
+            "구미베어 먹고 충치 생긴 죄", "써니사이드업 잘 만든 죄","팝콘먹으러 영화관 간 죄",
+            "모든 음식에 아보카도 넣어먹은 죄","수박 한 통 다 먹은 죄","방울토마토 엄청 먹은 죄",
+            "프레첼 계속 먹은 죄","베이컨 바싹 구운 죄","메이플 시럽 잔뜩 뿌린 죄",
+            "가지 좋아한 죄","커피마시고 밤 새운 죄","츄파춥스 맛있는 맛만 골라 먹은 죄",
+            "배추도사인 죄","와인 마시고 취한 죄","케이크 많이 먹은 죄",
+            "제로콜라 마신 죄","토끼이빨인 죄","항상 웃는 죄",
+            "꽃을 좋아한 죄","공룡 박사인 죄","게임 코인을 잔뜩 얻은 죄",
+            "엉뚱한 죄","포근한 마음을 가진 죄","장난꾸러기인 죄",
+            "같은 노래 무한 반복한 죄","눈물 많은 죄","흑백논리를 펼친 죄",
+            "선글라스 2개 낀 죄","사랑이 넘친 죄","과묵한 죄",
+            "힙한 죄","비 맞은 죄","노이즈 캔슬링한 죄",
+            "산타인 척 한 죄","에너지가 넘친 죄","고음을 질른 죄",
+            "똑똑한 죄","야근한 죄","민첩한 죄",
+            "이타적인 죄","녹아버린 죄","듬직한 죄",
+            "생명을 지킨 죄", "지구를 침공한 죄" // Index 49
+        ];
+
+        const imageContainer = document.getElementById('imageLinks');
+        for (let i = 1; i <= descriptions.length; i++) {
+            const link = document.createElement('a');
+            link.href = `hurlydetail.html?id=${i}`;
+            link.className = 'image-link';
+
+            const image = document.createElement('img');
+            image.src = `hurlyimages/${i}.png`;
+            image.alt = `Image ${i}`;
+
+            const span = document.createElement('span');
+            span.className = 'description-overlay';
+            span.textContent = descriptions[i - 1];
+
+            link.appendChild(image);
+            link.appendChild(span);
+            imageContainer.appendChild(link);
+        }
+    </script>
+</body>
+</html>

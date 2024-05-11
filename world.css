@@ -1,0 +1,22 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* 스크롤바 제거 */
+}
+
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 이미지를 전체 화면으로 표시 */
+#main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율을 유지하면서 요소에 완전히 채움 */
+    display: block; /* 기본적인 인라인 특성 제거 */
+}
